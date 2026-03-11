@@ -1,4 +1,4 @@
-# json_structured_output_abdul
+# AbbyDev AI Assistant
 
 A full-stack AI-powered Q&A application that demonstrates how to get **validated, structured JSON output** from a Large Language Model (LLM). The user asks a question, and the LLM returns a machine-parseable JSON response with a `summary` and a `confidence` score — validated at runtime with Zod.
 

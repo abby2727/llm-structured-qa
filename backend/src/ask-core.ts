@@ -1,5 +1,5 @@
-import { createChatModel } from './lc-model';
-import { AskResult, AskResultSchema } from './schema';
+import { createChatModel } from './lc-model.js';
+import { AskResult, AskResultSchema } from './schema.js';
 
 export async function askStructured(query: string): Promise<AskResult> {
 	const model = createChatModel();

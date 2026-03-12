@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { loadEnv } from './env';
-import { askStructured } from './ask-core';
+import { loadEnv } from './env.js';
+import { askStructured } from './ask-core.js';
 
 loadEnv();
 

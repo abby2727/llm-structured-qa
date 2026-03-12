@@ -1,5 +1,5 @@
 import { ChatGroq } from '@langchain/groq';
-import { loadEnv } from './env';
+import { loadEnv } from './env.js';
 
 export function createChatModel() {
 	loadEnv();

@@ -28,7 +28,7 @@ askStructured() is called (backend/src/ask-core.ts)
   — sends the prompt to Groq API with response_format: { type: 'json_object' }
         │
         ▼
-ChatGroq / Llama 3.1 8B Instant (via @langchain/groq)
+ChatGroq / llama-3.3-70b-versatile (via @langchain/groq)
   — LLM generates a JSON response: { "summary": "...", "confidence": 0.95 }
         │
         ▼
@@ -217,4 +217,4 @@ Navigate to [http://localhost:3000](http://localhost:3000), type a question, and
 - **JSON Object Mode** — `response_format: { type: 'json_object' }` constrains the LLM to output valid JSON
 - **Runtime validation with Zod** — guarantees the LLM's output matches the expected TypeScript type
 - **API proxy pattern** — Next.js route handler forwards requests to the backend, hiding the backend URL from the browser
-- **LangChain abstraction** — swap LLM providers (OpenAI, Gemini, Groq) with minimal code changes
+- **LangChain integration** — uses `@langchain/groq` to call the Groq API, with the model isolated in `lc-model.ts` so it can be swapped easily in the future

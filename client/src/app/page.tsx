@@ -63,7 +63,7 @@ export default function Home() {
 			<div className='mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-4 pb-24 pt-8'>
 				<header className='mb-4'>
 					<h1 className='text-xl font-semibold tracking-tight'>
-						AbbyDev AI Assistant
+						AI Assistant
 					</h1>
 				</header>
 

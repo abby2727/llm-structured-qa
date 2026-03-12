@@ -7,9 +7,13 @@ loadEnv();
 
 const app = express();
 
+const allowedOrigins = process.env.CORS_ORIGIN
+	? process.env.CORS_ORIGIN.split(',')
+	: ['http://localhost:3000'];
+
 app.use(
 	cors({
-		origin: ['http://localhost:3000'],
+		origin: allowedOrigins,
 		methods: ['POST', 'GET', 'OPTIONS', 'DELETE'],
 		allowedHeaders: ['Content-Type', 'Authorization'],
 		credentials: false
@@ -37,7 +41,7 @@ app.post('/ask', async (req, res) => {
 	}
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT ?? 3002;
 
 app.listen(PORT, () => {
 	console.log(`api is listening to port ${PORT}`);

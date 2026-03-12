@@ -22,6 +22,21 @@ app.use(
 
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+	res.json({
+		name: 'llm-structured-qa API',
+		status: 'online',
+		endpoints: {
+			'POST /ask': {
+				description: 'Ask a question and get a structured JSON answer',
+				body: { query: 'string' },
+				response: { summary: 'string', confidence: 'number (0–1)' }
+			}
+		},
+		note: 'No memory, no tool calling, no web search. Each question is answered independently.'
+	});
+});
+
 app.post('/ask', async (req, res) => {
 	try {
 		const { query } = req.body ?? {};

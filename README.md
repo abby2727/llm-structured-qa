@@ -1,6 +1,8 @@
-# AbbyDev AI Assistant
+# AI Q&A
 
 A full-stack AI-powered Q&A application that demonstrates how to get **validated, structured JSON output** from a Large Language Model (LLM). The user asks a question, and the LLM returns a machine-parseable JSON response with a `summary` and a `confidence` score — validated at runtime with Zod.
+
+> **Note:** This app has no memory, no tool calling, and no web search. Each question is answered independently using a single LLM call that returns structured JSON.
 
 ---
 

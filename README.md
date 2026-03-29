@@ -53,7 +53,7 @@ React UI renders an answer card showing the summary + confidence score
 ## Project Structure
 
 ```
-json_structured_output_abdul/
+llm-structured-qa/
 ├── backend/                  # Express + LangChain API server (port 3002)
 │   ├── src/
 │   │   ├── env.ts            # Loads .env variables (singleton)
